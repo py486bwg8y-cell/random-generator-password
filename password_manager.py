@@ -21,13 +21,13 @@ def save_entry(login, url, password):
 def main ():
     print("Генератор паролей")
     
-url = input("Введите URL сайта или оставте пустым для выхода").strip()
+url = input("Введите URL сайта или оставте пустым для выхода: ").strip()
 if url == "":
- print("программа отключена")
+ print("программа отключена.")
 
-login = input("введите логин или электронную почту").strip()
+login = input("введите логин или электронную почту: ").strip()
 
-length_input = input("Задайте длину пароля").strip()
+length_input = input("Задайте длину пароля: ").strip()
 if length_input == "":
     length = 16
 else:
@@ -38,8 +38,8 @@ else:
         length = 16  
 password = generate_password(length)
 print(f"\nсгенерированный пароль: {password}")
-save = input("сохранить запись в файл? (y/n):").strip().lower()
-if save == "y":
+save = input("сохранить запись в файл? [Y/n]:").strip().lower()
+if save == "Y":
     save_entry(login, url, password)
 else:
     print("запись удалена")
