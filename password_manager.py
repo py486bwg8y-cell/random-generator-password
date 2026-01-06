@@ -38,8 +38,8 @@ else:
         length = 16  
 password = generate_password(length)
 print(f"\nсгенерированный пароль: {password}")
-save = input("сохранить запись в файл? [Y/n]:").strip().lower()
-if save == "Y":
+save = input("сохранить запись в файл? [y/n]:").strip().lower()
+if save == "y":
     save_entry(login, url, password)
 else:
     print("запись удалена")
